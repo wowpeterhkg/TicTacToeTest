@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Raw session files must stay byte-identical to what the tool wrote
+transcript/*.jsonl -text

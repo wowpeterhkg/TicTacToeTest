@@ -1,0 +1,79 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://127.0.0.1:8787/api/*)",
+      "Bash(node C:/Users/wowpeter/Documents/GitHub-CXFOP/overlay/packages/mcp-bridge/dist/cli.js*)"
+    ]
+  },
+  "enabledPlugins": {
+    "corridor@corridor-plugins": true,
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "mattpocock-skills@mattpocock": true
+  },
+  "extraKnownMarketplaces": {
+    "corridor-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "C:\\Users\\wowpeter\\.corridor\\plugin-claude"
+      }
+    },
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "multica-ai/andrej-karpathy-skills"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
+    }
+  },
+  "skipWorkflowUsageWarning": true,
+  "agentPushNotifEnabled": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Users\\wowpeter\\.local\\bin\\airules-hook-session-start.cmd\" startup",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Users\\wowpeter\\.local\\bin\\airules-hook-session-start.cmd\" resume",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Users\\wowpeter\\.local\\bin\\airules-hook-session-start.cmd\" clear",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Users\\wowpeter\\.local\\bin\\airules-hook-session-start.cmd\" compact",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  color: #222;
+  background: #fff;
+}
+
+main {
+  max-width: 24rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  gap: 4px;
+  margin: 1rem 0;
+}
+
+.cell {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 1px solid #888;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.cell:disabled {
+  cursor: default;
+  color: inherit;
+}
+
+.cell.removable {
+  background: #fde8e8;
+}
+
+.cell.win {
+  background: #d9f2d9;
+}
+
+.controls button {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+}
+
+#status {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#log {
+  font-size: 0.9rem;
+  color: #555;
+}
