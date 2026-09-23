@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>No-Draw Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <main>
+    <h1>No-Draw Tic-Tac-Toe</h1>
+    <p id="status" aria-live="polite"></p>
+    <div id="board" class="board"></div>
+    <div class="controls">
+      <button id="roll" type="button" hidden>Roll removal</button>
+      <button id="new-game" type="button">New game</button>
+    </div>
+    <p id="roll-result"></p>
+    <ol id="log"></ol>
+    <p class="help">Rules: <a href="docs/RULES.md">docs/RULES.md</a></p>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
