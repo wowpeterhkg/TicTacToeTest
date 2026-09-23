@@ -21,6 +21,7 @@ A locked rule set in `docs/RULES.md`, backed by a checker script that exhaustive
 - [Draw handling](issues/02-draw-handling.md) — no tiebreak of any kind; the only way to win is three in a line.
 - [Removal rule](issues/03-removal-rule.md) — full board with no line triggers an RNG removal phase (total 2–5, split between players by RNG, either colour removable).
 - [Termination reading](issues/04-termination-reading.md) — probabilistic: terminates with probability 1 under win-seeking play; strict bound rejected.
+- [Removal details](issues/06-removal-details.md) — one split roll (share 0..T, remainder to the other), mandatory removal of any piece, freed cells open at once, next placer is the opponent of the last remover.
 
 ## Not yet specified
 
