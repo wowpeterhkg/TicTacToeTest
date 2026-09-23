@@ -35,7 +35,12 @@ Outside the repo (loaded into every session on this machine):
 - `mattpocock-skills` `wayfinder/SKILL.md` and `setup-matt-pocock-skills/issue-tracker-local.md`.
 - MCP server configuration in `~/.claude.json`.
 
-**Not captured in the repo:** the agent tried to copy the files above into `transcript/config/` (with MCP env/header values redacted). Claude Code's auto-mode safety classifier blocked it, first when reading `~/.claude.json` and then when copying global config into the repo. The attempts and denials are in the session file. See `config/` if the author added the files by hand afterwards.
+**Captured in `config/`:** the agent's own attempt to copy these (with MCP env/header values redacted) was blocked by Claude Code's auto-mode safety classifier, first when reading `~/.claude.json` and then when copying global config into the repo. The attempts and denials are in the session file. The author then copied them by hand with a PowerShell command the agent supplied (the first two attempts failed on shell mismatch, bash syntax in `cmd`; also in the session). The agent scanned and read every file before commit; the only credential-like strings are placeholder values in example snippets inside `CLAUDE.md`.
+
+- `config/global/` — `CLAUDE.md`, `settings.json`, `rules/*.md` (path-scoped rules load only when matching files are touched; `airules-tests.md` loaded when `tests/` was edited), `hooks/airules-hook-session-start.cmd`.
+- `config/plugins/` — `wayfinder-SKILL.md`, `corridor-hooks.json`.
+
+**Still not captured:** MCP server configuration from `~/.claude.json` (the file also holds account data; it needs manual redaction).
 
 ## Known gaps
 
