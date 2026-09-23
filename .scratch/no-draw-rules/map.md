@@ -13,7 +13,7 @@ A locked rule set in `docs/RULES.md`, backed by a checker script that exhaustive
 - Brief constraints override global house rules (no React/Vite, no backend, no 13-doc set).
 - Skills for grilling tickets: `/grilling`, `/domain-modeling`.
 - Premise: both players always try to win. Cooperative stalling is out of the design's guarantee.
-- Recording: raw Claude Code JSONL copied into `transcript/` at phase boundaries (assumed; not yet explicitly confirmed by the user).
+- Recording: raw Claude Code JSONL copied into `transcript/` at phase boundaries (confirmed by the user; single continuous session).
 
 ## Decisions so far
 
@@ -21,6 +21,8 @@ A locked rule set in `docs/RULES.md`, backed by a checker script that exhaustive
 - [Draw handling](issues/02-draw-handling.md) — no tiebreak of any kind; the only way to win is three in a line.
 - [Removal rule](issues/03-removal-rule.md) — full board with no line triggers an RNG removal phase (total 2–5, split between players by RNG, either colour removable).
 - [Termination reading](issues/04-termination-reading.md) — probabilistic: terminates with probability 1 under win-seeking play; strict bound rejected.
+- [Rule checker](issues/05-rule-checker.md) — 55,962 states; no stuck state, no line-less terminal; loop exists; perfect-play P(X wins) = 50% regardless of how stalling is scored; random play 65.2% X.
+- [Termination proof](issues/07-termination-proof.md) — every full board gives a forced win with probability >= 81.25% per removal phase; non-termination has probability 0 under win-seeking play.
 - [Removal details](issues/06-removal-details.md) — one split roll (share 0..T, remainder to the other), mandatory removal of any piece, freed cells open at once, next placer is the opponent of the last remover.
 
 ## Not yet specified
